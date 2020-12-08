@@ -28,7 +28,12 @@ class Rectangle:
     def area(self):   # pole powierzchni
         return (self.pt2.x - self.pt1.x) * (self.pt2.y - self.pt1.y)
 
-    def move(self, x, y): pass  # przesunięcie o (x, y)
+    def move(self, x, y):   # przesunięcie o (x, y)
+        x1 = self.pt1.x + x
+        x2 = self.pt2.x + x
+        y1 = self.pt1.y + y
+        y2 = self.pt2.y + y
+        return Rectangle(x1, y1, x2, y2)
 
 
 # Kod testujący moduł.
@@ -51,6 +56,10 @@ class TestRectangle(unittest.TestCase):
 
     def test_area(self):
         self.assertTrue(Rectangle.area(Rectangle(1, 1, 3, 3)), 4)
+        
+    def test_move(self):
+        self.assertTrue(self.rectangle1.move(3, 4), Rectangle(4, 4, 6, 6))
+
 
 r1 = Rectangle(1, 1, 2, 2)
 r2 = Rectangle(1, 1, 2, 2)
