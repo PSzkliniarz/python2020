@@ -1,0 +1,9 @@
+Program przedstawia implementacje grafu za pomocą listy sąsiedztwa,
+oraz działanie algorytmów przeszukiwania w szerz (BFS) i w głąb (DFS).
+Zarówno dla grafu skierowanego jak i nieskierowanego:
+- tworzy graf
+- dodaje do grafu wierzchołki od 0 do n-1
+- dodaje wybraną ilość krawędzi, między losowymi wierzchołkami
+- wypisuje wierzchołki grafu
+- wypisuje połączenia między wierzchołkami dla wszystkich wierzchołków
+- przeszukuje obydwoma algorytmami od wybranego wierzchołka i wypisuje węzły w odpowiedniej kolejności
